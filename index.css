@@ -1,0 +1,50 @@
+body {
+  background-color: #ffff00;
+  background-position: center;
+}
+
+.error {
+  background-color: orangered;
+  color: white;
+  padding: 4px;
+  margin-left: 48px;
+  margin-bottom: 5px;
+  width: 55%;
+}
+
+h1 {
+  text-align: center;
+  font-family: monospace;
+  font-weight: bold;
+  margin-top: 15%;
+}
+
+#text {
+  margin-left: 24%;
+  box-sizing: border-box;
+  box-shadow: 10px 10px 10px rgb(105, 102, 102);
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+  padding-top: 2rem;
+  width: 50%;
+  border-radius: 0.7rem;
+}
+.submit {
+  background-color: #000;
+  color: #fff;
+  border-radius: 3rem;
+  padding: 0.5rem;
+  margin-bottom: 2.5rem;
+  margin-left: 45%;
+  margin-top: 1.5rem;
+}
+.button {
+  margin-left: 20%;
+}
+
+.btn {
+  background-color: #000;
+  color: #fff;
+  border-radius: 3rem;
+  padding: 0.5rem;
+}
