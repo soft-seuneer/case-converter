@@ -61,15 +61,104 @@ btn3.addEventListener('click', e => {
             for( let i = 0; i < sentence.length; i++){
                 sentence[i] = sentence [i][0].toUpperCase() + sentence[i].slice(1);
             }
-            document.write(sentence.join(' '));
-            return sentence;
+            return sentence.join(' ');
+
           }
           
-          document.querySelector('#text');
           const resulT = `${text.value}`;
-  
-           titleCase(resulT);
-                  
+          
+           const tiTleCase = titleCase(resulT);
+           text.value = tiTleCase;
           
     }
+})
+
+// To sentence-Case
+
+btn4.addEventListener('click', e => {
+    e.preventDefault();
+    
+    if (text.value === '') {
+        msg.classList.add('error');
+        msg.innerHTML = 'Please enter field';
+
+        setTimeout(() => msg.remove(), 3000);
+    } else {
+        
+        const resulT = `${text.value}`;
+        const toSsenteceCase = resulT[0].toUpperCase() + resulT.slice(1).toLowerCase();
+        text.value = toSsenteceCase; 
+    } 
+})
+// To Capitalized
+btn5.addEventListener('click', e => {
+    e.preventDefault();
+    
+    if (text.value === '') {
+        msg.classList.add('error');
+        msg.innerHTML = 'Please enter field';
+
+        setTimeout(() => msg.remove(), 3000);
+    } else {
+
+const resulT = `${text.value}`;
+const capitalizedString = (str) => str[0].toUpperCase() + str.slice(1).toLowerCase();
+
+const word = resulT.split(' ').map(capitalizedString);
+const capitalizeSentence = word.join(' ');
+text.value = capitalizeSentence;
+}
+})
+
+// To inverseCase
+btn6.addEventListener('click', e => {
+    e.preventDefault();
+    
+    if (text.value === '') {
+        msg.classList.add('error');
+        msg.innerHTML = 'Please enter field';
+
+        setTimeout(() => msg.remove(), 3000);
+    } else {
+        function iNVERSECASE(string){
+            const sentence = string.toUpperCase().split(' ');
+            for( let i = 0; i < sentence.length; i++){
+                sentence[i] = sentence [i][0].toLowerCase() + sentence[i].slice(1);
+            }
+            return sentence.join(' ');
+
+          }
+          
+          const resulT = `${text.value}`;
+          
+           const iVERSECASE = iNVERSECASE(resulT);
+           text.value = iVERSECASE;
+          
+    }
+})
+
+//To Alternating Case
+btn7.addEventListener('click', e => {
+    e.preventDefault();
+    
+    if (text.value === '') {
+        msg.classList.add('error');
+        msg.innerHTML = 'Please enter field';
+
+        setTimeout(() => msg.remove(), 3000);
+    } else { 
+        const alternateCase = function (s) {
+            const chars = s.toLowerCase().split("");
+            for (let i = 0; i < chars.length; i += 2) {
+              chars[i] = chars[i].toUpperCase();
+            }
+            return chars.join("");
+    
+        }
+        const resulT = `${text.value}`;
+
+        const alTERnate = alternateCase(resulT);
+        text.value = alTERnate;
+
+}
 })
